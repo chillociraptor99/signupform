@@ -1,0 +1,63 @@
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+/* Mine */
+
+@import url(https://fonts.bunny.net/css?family=amatic-sc:700);
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+#signupbox {
+    display: flex;
+    width: 250px;
+    margin: 100px auto;
+
+    font-family: 'Amatic SC', handwriting;
+    font-size: 2em;
+}
+
+input[type="text"]
+input[type="email"],
+input[type="password"] {
+    border: 2px solid rgb(124, 124, 124);
+    border-radius: 3px;
+    background: rgb(124, 124, 124, 0.7);
+}
+input:placeholder-shown {
+    border: 2px solid rgb(124, 124, 124);
+    border-radius: 3px;
+    background: rgb(124, 124, 124, 0.7);
+}
+input:focus {
+    background: rgb(124, 124, 124, 0.9);
+}
+
+input:invalid {
+    border: 2px solid rgb(151, 82, 82);
+    background: rgb(136, 72, 72, 0.9);
+}
