@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Create Account</title>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    
+</head>
+<body>
+    <div id="bannerLeft">
+        <div id="bannerTxt">Retroscape</div>
+    </div>
+    <div id="signupbox">
+        <form>
+            <div id="labelBox"><label for="username">Username</label></div>
+            <div id="uname">
+                <input type="text"
+                id="username"
+                name="username"
+                required />
+            </div>
+            <div id="labelBox"><label for="web">Website</label></div>
+            <div id="web">
+                <input type="url"
+                id="web"
+                name="web"
+                required />
+            </div>
+            <div id="labelBox"><label for="password">Password</label></div>
+            <div id="pw">
+                <input type="password"
+                id="pw"
+                name="pw"
+                minlength="8"
+                required />
+            </div>
+            <div id="labelBox"><label for="email">Email</label></div>
+            <div id="mail">
+                <input type="email"
+                id="email"
+                name="email"
+                required />
+            </div>
+            <div id="labelBox"><label for="phone">Phone</label></div>
+            <div id="phone">
+                <input type="number"
+                id="phone"
+                name="phone"
+                minlength="10"
+                pattern="\d{3}[\-]\d{3}[\-]\d{4}" 
+                required />
+            </div>
+            <div id="labelBox"><label for="bday">Birthday</label></div>
+            <div id="bday">
+                <input type="date"
+                id="bday"
+                name="bday"
+                required />
+            </div>
+
+            <div id="sbmt"><label for="submit"><button type="submit">Register</button></label></div>
+        </form>
+    </div>
+    
+</body>
+</html>
