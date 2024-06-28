@@ -1,3 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=audiowide:400|gloria-hallelujah:400);
+
 /* CSS Reset */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -8,6 +10,7 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    height: 100%;
   }
   img, picture, video, canvas, svg {
     display: block;
@@ -24,40 +27,182 @@
   }
 /* Mine */
 
-@import url(https://fonts.bunny.net/css?family=amatic-sc:700);
-
 body {
-    background-color: #000;
-    color: #fff;
-    font-family: 'Advent Pro', sans-serif;
+  background-color: rgb(61, 71, 83);
+  color: #fff;
+  font-size: 1.5em;
+  background-image: url(./bg.jpg);
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: row;
 }
 
 #signupbox {
-    display: flex;
-    width: 250px;
-    margin: 100px auto;
+  position: relative;
+  width: auto;
+  height: 250px;
+  margin: auto;
+  padding: 20px;
 
-    font-family: 'Amatic SC', handwriting;
-    font-size: 2em;
+  outline: 4px solid rgb(44, 47, 39);
+  border: 2px solid rgb(171, 45, 73);
+  border-radius: 3px;
+
+  background-color: rgba(177, 152, 71, 0.15);  
+  backdrop-filter: blur(5px);
+  box-shadow: 5px 5px 10px 3px rgb(22, 25, 29);
+
+  font-family: 'Gloria Hallelujah', handwriting;
+  font-size: 1rem;
+  color: #fdf9f1;
+}
+
+#signupbox > form {
+  display: grid;
+  grid-template-columns: 120px 200px 120px 200px;
+  grid-template-rows: repeat(4, 50px);
+  align-items: center;
+  justify-content: start;
+}
+#sbmt {
+  grid-column: 1 / span 4;
+  justify-self: end;
+  margin-top: 10px;
+}
+
+#bannerLeft {
+  width: 500px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: url(./leftBanner.jpg);
+  border-right: 3px solid rgb(255, 213, 179);
+  box-shadow: 15px 10px 25px rgb(22, 25, 29);
+}
+#bannerTxt {
+  font-family: 'Audiowide', display;
+  font-size: 2.5em;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgb(73, 68, 67);
+
+  width: 100%;
+  margin-top: 200px;
+
+  background: rgb(59, 64, 70, 0.3);
+  outline: 2px solid rgb(255, 213, 179);
+  border-top: 3px solid rgb(171, 45, 73);
+  border-bottom: 3px solid rgb(171, 45, 73);
+}
+
+button {
+  font-family: 'Audiowide', display;
+  font-size: 1rem;
+
+  outline: 3px solid rgb(83, 87, 76);
+  border: 2px solid rgb(171, 45, 73);
+
+  border-radius: 3px;
+  background: rgb(6, 7, 2, 0.2);
+  color: #fdf9f1;
+  width: 100px;
+  box-shadow: 2px 2px 2px 2px rgb(22, 25, 29);
+}
+
+button:hover {
+  outline: 3px solid rgb(83, 87, 76);
+  border: 2px dashed rgb(171, 45, 73);
+  background: rgba(63, 73, 29, 0.2);
+  box-shadow: 2px 2px 2px 2px rgb(22, 25, 29);
+
+  cursor: pointer;
+}
+
+button:active {
+  outline: 3px solid rgb(83, 87, 76);
+  border: 2px dashed rgb(171, 45, 73);
+  border-radius: 3px;
+  background: rgb(6, 7, 2, 0.2);
+  box-shadow: 1px 1px 10px 3px rgb(255, 213, 179);
+
+  cursor: pointer;
+}
+
+label {
+  font-family: 'Audiowide', display;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 3px rgb(0, 0, 0);
 }
 
 input[type="text"]
 input[type="email"],
-input[type="password"] {
-    border: 2px solid rgb(124, 124, 124);
-    border-radius: 3px;
-    background: rgb(124, 124, 124, 0.7);
-}
-input:placeholder-shown {
-    border: 2px solid rgb(124, 124, 124);
-    border-radius: 3px;
-    background: rgb(124, 124, 124, 0.7);
+input[type="password"],
+input[type="date"] {
+  transition: all 0.5s ease-in-out;
+  width: 190px;
+
 }
 input:focus {
-    background: rgb(124, 124, 124, 0.9);
+  outline: 3px solid rgb(248,207,123);
+  border: 0px;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+  width: 190px;
 }
 
 input:invalid {
-    border: 2px solid rgb(151, 82, 82);
-    background: rgb(136, 72, 72, 0.9);
+  border: 0px;
+  border-radius: 3px;
+  background: rgb(121, 119, 98, 0.8);
+  transition: all 0.5s ease-in-out;
+  width: 190px;
+}
+
+input:invalid:focus {
+  outline: 3px solid rgb(171, 45, 73);
+  border: 0px;
+  background: rgb(171, 45, 73, 0.75);
+  transition: all 0.5s ease-in-out;
+  width: 190px;
+}
+
+input:valid {
+  border: 0px;
+  border-radius: 3px;
+  background: rgb(248,207,123, 0.7);
+  transition: all 0.5s ease-in-out;
+  width: 190px;
+}
+
+@media screen and (max-width:900px) {
+  #bannerLeft {
+    position: absolute;
+    width: 100vw;
+    min-height: 15vh;
+    background: url(./leftBanner.jpg);
+  }
+  #bannerTxt {
+    position: absolute;
+    font-size: 2.5em;
+    text-align: center;
+
+    width: 100vw;
+    margin-top: 10px;
+  }
+  #signupbox {
+    width: 45vh;
+    height: 100%;
+    margin-top: 25vh;
+  }
+  #signupbox > form {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: repeat(7, 30px);
+    grid-gap: 1em;
+  }
+  #sbmt {
+    grid-column: 1 / span 2;
+    justify-self: end;
+    margin-right: 10px;
+  }
 }
